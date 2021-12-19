@@ -49,13 +49,9 @@ body {
     align-items: center;
 }
 
-.header__nav-group {}
-
 .header__logo {
     margin: 0 41px 0 0;
 }
-
-.header__search {}
 
 .header__burger {
     margin: 0 31px 0 0;
@@ -65,25 +61,9 @@ body {
     margin: 0 31px 0 0;
 }
 
-.header__backet {}
-
 .header__menu {
     display: none;
 }
-
-.header__menu-title {}
-
-.header__menu-list {}
-
-.header__menu-item {}
-
-.menu-sub-item {}
-
-.menu-sub-item__title {}
-
-.menu-sub-item__list {}
-
-.menu-sub-item__item-link {}
 
 .brand {
     display: flex;
@@ -119,13 +99,6 @@ body {
     flex-grow: 1;
 }
 
-.sales {}
-
-.container {}
-
-.sales__title {}
-
-.visually-hidden {}
 
 .sales__list {
     display: flex;
@@ -337,8 +310,6 @@ body {
     margin-right: auto;
 }
 
-.subscription__subscribe {}
-
 .subscription__item-text {
     margin-top: 32px;
     font-size: 20px;
@@ -356,6 +327,8 @@ body {
     text-transform: uppercase;
     margin-top: 63px;
 }
+
+
 
 .subscription__item-subtitle {
     display: block;
