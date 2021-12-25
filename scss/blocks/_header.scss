@@ -1,0 +1,134 @@
+.header {
+    background-color: $black;
+
+    &__wrp {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 75px;
+    }
+
+    &__wrp-logo-form {
+        display: flex;
+        align-items: center;
+    }
+
+    &__search {
+        position: relative;
+        display: none;
+    }
+
+    &__search:before {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background: red;
+        top: 13px;
+        left: 7px;
+        background-image: url('../img/loupe.svg');
+        background-size: 10px 10px;
+    }
+
+    &__search-input {
+        background: transparent;
+        padding: 10px 20px;
+        border: none;
+        outline: 1px solid $black;
+        color: white;
+    }
+
+    &__logo {
+        margin: 0 41px 0 0;
+    }
+
+    &__burger {
+        margin: 0 31px 0 0;
+    }
+
+    &__burger-svg {
+        fill: white;
+    }
+
+    &__person {
+        margin: 0 31px 0 0;
+    }
+
+    &__backet {
+        position: relative;
+    }
+
+    &__backet-svg {
+        fill: white;
+    }
+
+    &__person-svg {
+        fill: white;
+    }
+
+    &__backet-counter {
+        @include flex-center;
+        width: 19px;
+        height: 19px;
+        left: 19px;
+        top: -19px;
+        @include font(12px, 14px, 400);
+        position: absolute;
+        color: white;
+        background: $pink-text;
+        border-radius: 50%;
+    }
+
+    &__menu {
+        display: none;
+    }
+
+    &__search_wrp:hover &__search,
+    &__search_wrp:focus &__search,
+    &__search_wrp:active &__search {
+        display: block;
+    }
+
+    &__search_wrp:hover &__loupe,
+    &__search_wrp:focus &__loupe,
+    &__search_wrp:active &__loupe {
+        display: none;
+    }
+
+    &__search_wrp:hover &__search-input,
+    &__search_wrp:focus &__search-input,
+    &__search_wrp:active &__search-input {
+        outline: 2px solid $pink-text;
+    }
+
+    &__search-input:focus &__search {
+        display: block;
+    }
+
+    &__burger-svg:hover,
+    &__burger-svg:focus {
+        fill: $pink-text;
+    }
+
+    &__burger-svg:active {
+        fill: blue;
+    }
+
+    &__person-svg:hover,
+    &__person-svg:focus {
+        fill: $pink-text;
+    }
+
+    &__person-svg:active {
+        fill: blue;
+    }
+
+    &__backet-svg:hover,
+    &__backet-svg:focus {
+        fill: $pink-text;
+    }
+
+    &__backet-svg:active {
+        fill: blue;
+    }
+}

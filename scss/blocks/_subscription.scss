@@ -1,0 +1,87 @@
+.subscription {
+    background: url("../img/photo subscribe.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 448px;
+    min-height: 448px;
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 87px;
+    }
+
+    &__discription {
+        display: flex;
+        width: 360px;
+        flex-direction: column;
+    }
+
+    &__item-img {
+        height: 96px;
+        width: 96px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &__item-text {
+        margin-top: 32px;
+        @include font(20px, 24px, 400);
+        color: $black;
+    }
+
+    &__item-title {
+        text-align: center;
+        @include font(24px, 40px, 700);
+        color: $black;
+        text-transform: uppercase;
+        margin-top: 63px;
+        margin-bottom: 32px;
+    }
+
+    &__item-subtitle {
+        display: block;
+        @include font(18px, 30px, 400);
+        color: $black;
+        text-transform: uppercase;
+    }
+
+    &__item-form {
+        display: flex;
+    }
+
+    &__item-input {
+        @include font(14px, 17px, 400);
+        height: 49px;
+        width: 256px;
+        background: $grey-button;
+        border-radius: 49px 0 0 49px;
+        border-style: none;
+        padding-left: 22px;
+    }
+
+    &__item-input:hover {
+        outline: 1px solid black;
+    }
+
+    &__item-button {
+        border-style: none;
+        width: 100px;
+        height: 49px;
+        background: $pink-text;
+        color: $white-text;
+        border-radius: 0 49px 49px 0;
+    }
+
+    &__item-button:hover,
+    &__item-button:focus {
+        background: $white-text;
+        color: $pink-text;
+        outline: 1px solid black;
+    }
+
+    &__item-button:active {
+        background: $pink-text;
+        color: $white-text;
+    }
+}
