@@ -98,6 +98,10 @@ body {
     color: white;
 }
 
+.header__search-input:focus .header__search {
+    display: block;
+}
+
 
 
 .header__logo {
@@ -113,8 +117,12 @@ body {
 }
 
 .header__burger-svg:hover,
-.header__burger-svg:active .header__burger-svg:focus {
+.header__burger-svg:focus {
     fill: var(--pink-text);
+}
+
+.header__burger-svg:active {
+    fill: blue;
 }
 
 .header__person {
@@ -126,8 +134,12 @@ body {
 }
 
 .header__person-svg:hover,
-.header__person-svg:active .header__person-svg:focus {
+.header__person-svg:focus {
     fill: var(--pink-text);
+}
+
+.header__person-svg:active {
+    fill: blue;
 }
 
 .header__backet {
@@ -157,9 +169,12 @@ body {
 }
 
 .header__backet-svg:hover,
-.header__backet-svg:active,
 .header__backet-svg:focus {
     fill: var(--pink-text);
+}
+
+.header__backet-svg:active {
+    fill: blue;
 }
 
 .header__menu {
@@ -344,6 +359,15 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.product__item-button:hover,
+.product__item-button:focus {
+    background: var(--pink-text);
+}
+
+.product__item-button:active {
+    background: transparent;
+}
+
 .product__item-button-icon {
     margin-right: 10px;
 }
@@ -398,10 +422,15 @@ body {
 }
 
 .products__button:hover,
-.products__button:active,
 .products__button:focus {
     background-color: var(--pink-text);
     color: var(--white-text);
+
+}
+
+.products__button:active {
+    color: var(--pink-text);
+    background-color: var(--white-text);
 }
 
 .advantages {
@@ -522,6 +551,10 @@ body {
     padding-left: 22px;
 }
 
+.subscription__item-input:hover {
+    outline: 1px solid black;
+}
+
 .subscription__item-button {
     border-style: none;
     width: 100px;
@@ -529,6 +562,18 @@ body {
     background: var(--pink-text);
     color: var(--white-text);
     border-radius: 0 49px 49px 0;
+}
+
+.subscription__item-button:hover,
+.subscription__item-button:focus {
+    background: var(--white-text);
+    color: var(--pink-text);
+    outline: 1px solid black;
+}
+
+.subscription__item-button:active {
+    background: var(--pink-text);
+    color: var(--white-text);
 }
 
 .socials {
@@ -568,9 +613,17 @@ body {
 }
 
 .socials__links-item:hover .socials__links-icon,
-.socials__links-item:active .socials__links-icon,
 .socials__links-item:focus .socials__links-icon {
     fill: var(--white-text);
+}
+
+.socials__links-item:active .socials__links-icon {
+    fill: blue;
+
+}
+
+.socials__links-item:active {
+    outline: 2px solid white;
 }
 
 .socials__links-link {
