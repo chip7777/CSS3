@@ -1,7 +1,8 @@
 .products {
-    margin-top: 96px;
+
 
     &__title {
+        margin-top: 96px;
         text-align: center;
         color: $black;
         @include font(30px, 36px, 400);
@@ -11,10 +12,10 @@
         text-align: center;
         color: $gray-text;
         @include font(14px, 17px, 400);
+        margin-bottom: 48px;
     }
 
     &__list {
-        margin-top: 48px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -131,4 +132,73 @@
         color: $pink-text;
         background-color: $white-text;
     }
+
+    &__filter-list {
+        min-height: 134px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__filter-item {
+        @include font(14px, 17px, 600);
+        text-transform: uppercase;
+        min-width: 360px;
+        display: flex;
+        align-items: center;
+        color: $catalog-filter;
+    }
+
+    &__filter-title {
+        color: black;
+    }
+
+    &__filter_icon {
+        fill: black;
+        margin-left: 11px;
+    }
+
+    &__filter-open {
+        fill: $catalog-filter;
+        margin-left: 10px;
+    }
+
+    &__filter-sublist {
+        display: flex;
+    }
+
+    &__filter-subitem {
+        padding-right: 30px;
+    }
+
+    &__filter-subitem:hover {
+        text-decoration: underline;
+    }
+
+    &__counters {
+        @include flex-center;
+    }
+
+    &__counters-list {
+        border: 1px solid $catalog-counter;
+        min-height: 43px;
+        width: 283px;
+        margin-top: 48px;
+        margin-bottom: 96px;
+        @include flex-center;
+        @include font(16px, 19px, 300);
+        color: silver;
+    }
+
+    &__counters-item {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    &__counters-black {
+        color: black;
+        font-weight: 600;
+
+    }
+
 }
