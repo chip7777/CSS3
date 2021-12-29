@@ -1,0 +1,180 @@
+.cart {
+
+    &__title-wrapper {
+        background: $arrivals;
+    }
+
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 148px;
+
+    }
+
+    &__title-text {
+        @include font(24px, 29px);
+        color: $pink-text;
+        text-transform: uppercase;
+
+    }
+
+    &__wrapper {
+        margin-top: 96px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        min-height: 306px;
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    }
+
+    &__item-text {
+        margin-bottom: 6px;
+        @include font(22px, 26px)
+    }
+
+    &__item_cost {
+        color: $pink-text;
+    }
+
+    &__item-first {
+        margin-top: 42px;
+    }
+
+    &__item-crosschair {
+        fill: black;
+        margin-top: 28px;
+        margin-right: 22px;
+
+    }
+
+    &__item-crosschair:hover {
+        outline: 2px solid black;
+    }
+
+    &__item-crosschair:active {
+        background: $pink-text;
+    }
+
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        width: 372px;
+
+        padding-top: 22px;
+        padding-left: 31px;
+    }
+
+    &__item-title {
+        text-transform: uppercase;
+        @include font(24px, 29px);
+    }
+
+    &__img {
+        width: 262px;
+        height: 306px;
+    }
+
+    &__address {
+        padding-top: 17px;
+        width: 360px;
+    }
+
+    &__address-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__address-title {
+        @include font(16px, 19px, 300);
+        color: $black;
+        text-transform: uppercase;
+    }
+
+    &__address-input {
+        padding-left: 17px;
+        display: flex;
+
+        height: 44px;
+        margin-top: 20px;
+        border: none;
+        outline: 1px solid gray;
+        @include font(13px, 16px, 300);
+    }
+
+    &__address-input:hover,
+    &__address-input:focus,
+    &__address-button:hover,
+    &__address-button:focus {
+        outline: 2px solid black;
+    }
+
+    &__address-button {
+        margin-top: 24px;
+        width: 100px;
+        height: 34px;
+        background: transparent;
+        border: none;
+        outline: 1px solid gray;
+        text-transform: uppercase;
+        @include font(11px, 13px, 300);
+    }
+
+    &__address-button:active {
+        background: $pink-text;
+        color: white;
+    }
+
+    &__checkout {
+        padding: 39px 34px;
+        margin-top: 90px;
+        height: 214px;
+        background: $cart-checkuot-bg;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__checkout-subtotal {
+        @include font(11px, 13px);
+        text-transform: uppercase;
+        color: $cart-checkuot-total;
+        margin-bottom: 12px;
+    }
+
+    &__checkout-grandtotal {
+        @include font(16px, 19px);
+        text-transform: uppercase;
+        color: $cart-checkuot-total;
+        margin-bottom: 39px;
+    }
+
+    &__checkout-cost {
+        color: $pink-text;
+        ;
+    }
+
+    &__checkout-button {
+        margin: 0 auto;
+        width: 273px;
+        height: 50px;
+        background: $pink-text;
+        color: $cart-checkuot-bg;
+        border: none;
+        @include font(16px, 19px, 300);
+        text-transform: uppercase;
+    }
+}
