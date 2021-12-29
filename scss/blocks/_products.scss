@@ -1,0 +1,204 @@
+.products {
+
+
+    &__title {
+        margin-top: 96px;
+        text-align: center;
+        color: $black;
+        @include font(30px, 36px, 400);
+    }
+
+    &__text {
+        text-align: center;
+        color: $gray-text;
+        @include font(14px, 17px, 400);
+        margin-bottom: 48px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        justify-content: space-between;
+        width: 360px;
+        min-height: 420px;
+        margin-bottom: 30px;
+        background-color: $yellow-bkg;
+    }
+
+    &__item-wrapper {
+        position: relative;
+    }
+
+    &__item-wrapper:hover &__item-overlay,
+    &__item-wrapper:hover &__item-button,
+    &__item-wrapper:active &__item-overlay,
+    &__item-wrapper:active &__item-button,
+    &__item-wrapper:focus &__item-overlay,
+    &__item-wrapper:focus &__item-button {
+        display: flex;
+    }
+
+    &__item-overlay {
+        display: none;
+        width: 100%;
+        min-height: 420px;
+        background: rgba(58, 56, 56, 0.86);
+        position: absolute;
+        top: 0;
+    }
+
+    &__item-button {
+        border-style: none;
+        outline: 1px solid white;
+        background: transparent;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        @include font(14px, 17px, 400);
+        color: white;
+        width: 138px;
+        height: 43px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__item-button:hover,
+    &__item-button:focus {
+        background: $pink-text;
+    }
+
+    &__item-button:active {
+        background: transparent;
+    }
+
+    &__item-button-icon {
+        margin-right: 10px;
+    }
+
+    &__item-img {
+        margin-bottom: 24px;
+    }
+
+    &__item-title {
+        @include font(13px, 16px, 400);
+        text-transform: uppercase;
+        color: $black-text;
+        margin-left: 18px;
+    }
+
+    &__item-text {
+        margin-left: 18px;
+        margin-top: 13px;
+        color: $gray-product-text;
+        @include font(14px, 17px, 300);
+    }
+
+    &__item-cost {
+        margin-top: 18px;
+        margin-left: 18px;
+        margin-bottom: 20px;
+        color: $pink-text;
+        @include font(16px, 19px, 400);
+    }
+
+    &__button_wrap {
+        margin: 48px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__button {
+        color: $pink-text;
+        width: 211px;
+        height: 47px;
+        background-color: $white-text;
+        border-color: $pink-text;
+        @include font(14px, 17px, 400);
+    }
+
+    &__button:hover,
+    &__button:focus {
+        background-color: $pink-text;
+        color: $white-text;
+    }
+
+    &__button:active {
+        color: $pink-text;
+        background-color: $white-text;
+    }
+
+    &__filter-list {
+        min-height: 134px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__filter-item {
+        @include font(14px, 17px, 600);
+        text-transform: uppercase;
+        min-width: 360px;
+        display: flex;
+        align-items: center;
+        color: $catalog-filter;
+    }
+
+    &__filter-title {
+        color: black;
+    }
+
+    &__filter_icon {
+        fill: black;
+        margin-left: 11px;
+    }
+
+    &__filter-open {
+        fill: $catalog-filter;
+        margin-left: 10px;
+    }
+
+    &__filter-sublist {
+        display: flex;
+    }
+
+    &__filter-subitem {
+        padding-right: 30px;
+    }
+
+    &__filter-subitem:hover {
+        text-decoration: underline;
+    }
+
+    &__counters {
+        @include flex-center;
+    }
+
+    &__counters-list {
+        border: 1px solid $catalog-counter;
+        min-height: 43px;
+        width: 283px;
+        margin-top: 48px;
+        margin-bottom: 96px;
+        @include flex-center;
+        @include font(16px, 19px, 300);
+        color: silver;
+    }
+
+    &__counters-item {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    &__counters-black {
+        color: black;
+        font-weight: 600;
+
+    }
+
+}

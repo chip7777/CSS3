@@ -1,0 +1,32 @@
+.arrivals {
+    background-color: $arrivals;
+    height: 148px;
+    @include flex-center;
+    justify-content: space-between;
+
+    &__title {
+        @include font(24px, 29px);
+        text-transform: uppercase;
+        color: $pink-text;
+    }
+
+    &__nav {
+        text-decoration: none;
+        @include font(14px, 17px, 700);
+        text-transform: uppercase;
+    }
+
+    &__menu-link {
+        text-decoration: none;
+        color: $arivals-nav;
+    }
+
+    &__menu-pink {
+        color: $pink-text;
+    }
+
+    &__menu-link:hover {
+        color: black;
+        text-decoration: underline;
+    }
+}
