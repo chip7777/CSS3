@@ -11,28 +11,34 @@
         @include flex-center;
         flex-direction: column;
         min-height: 260px;
-        margin-top: 30px;
+        margin-top: 65px;
         text-transform: uppercase;
+        width: 30%;
     }
 
     &__item--woman {
         background-image: url('../img/sales_woman.jpg');
         background-repeat: no-repeat;
+        background-size: cover;
     }
 
     &__item--man {
         background-image: url('../img/sales_man.jpg');
         background-repeat: no-repeat;
+        background-size: cover;
     }
 
     &__item--kids {
         background-image: url('../img/sales_kids.jpg');
         background-repeat: no-repeat;
+        background-size: cover;
     }
 
     &__item--shoes {
         background-image: url('../img/sales_shoes.jpg');
         background-repeat: no-repeat;
+        background-size: cover;
+        margin-top: 20px;
         width: 100%;
         min-height: 180px;
     }
@@ -46,5 +52,28 @@
         @include font(24px, 29px, 700);
         color: $pink-text;
 
+    }
+}
+
+@media (max-width: 769px) {
+    .sales {
+        &__item {
+            margin-top: 20px;
+            min-height: 167px;
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .sales {
+        &__item {
+            margin-top: 20px;
+            width: 100%;
+            min-height: 247px;
+        }
+
+        &__item--woman {
+            margin-top: 65px;
+        }
     }
 }
