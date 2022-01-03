@@ -55,14 +55,33 @@
     }
 }
 
+@media (max-width: 560px) {
+    .brand {
+        &__title {
+            @include font(38px, 46px, 900);
+        }
+
+        &__subtitle {
+            @include font(20px, 24px, 700);
+        }
+    }
+}
+
+@media (max-width: 455px) {
+    .brand {
+        &__title {
+            @include font(30px, 46px, 900);
+        }
+
+        &__subtitle {
+            @include font(16px, 24px, 700);
+        }
+    }
+}
+
 @media (max-width: 376px) {
     .brand {
         height: 363px;
-
-
-        &__img {
-            display: none;
-        }
 
         &__title {
             @include font(38px, 46px, 900);
@@ -70,6 +89,10 @@
 
         &__subtitle {
             @include font(20px, 24px, 700);
+        }
+
+        &__img {
+            display: none;
         }
     }
 }

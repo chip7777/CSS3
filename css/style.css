@@ -400,12 +400,39 @@ body {
   }
 }
 
+@media (max-width: 560px) {
+  .brand__title {
+    font-size: 38px;
+    line-height: 46px;
+    font-weight: 900;
+    font-style: normal;
+  }
+  .brand__subtitle {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
+@media (max-width: 455px) {
+  .brand__title {
+    font-size: 30px;
+    line-height: 46px;
+    font-weight: 900;
+    font-style: normal;
+  }
+  .brand__subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    font-style: normal;
+  }
+}
+
 @media (max-width: 376px) {
   .brand {
     height: 363px;
-  }
-  .brand__img {
-    display: none;
   }
   .brand__title {
     font-size: 38px;
@@ -418,6 +445,9 @@ body {
     line-height: 24px;
     font-weight: 700;
     font-style: normal;
+  }
+  .brand__img {
+    display: none;
   }
 }
 
