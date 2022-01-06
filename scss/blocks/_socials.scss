@@ -4,12 +4,13 @@
     &__panel {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__links {
         display: flex;
         justify-content: space-between;
-        margin-top: 24px;
+
     }
 
     &__links-item {
@@ -54,4 +55,25 @@
         margin-bottom: 30px;
     }
 
+}
+
+@media (max-width: 376px) {
+    .socials {
+        &__panel {
+            flex-direction: column;
+        }
+
+        &__copyrigth {
+            order: 1;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+
+        &__links {
+            justify-content: center;
+            margin-top: 40px;
+            order: 0;
+        }
+    }
 }

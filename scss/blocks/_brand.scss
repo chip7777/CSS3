@@ -1,12 +1,15 @@
 .brand {
     display: flex;
-    margin-bottom: 63px;
 
     &__title {
         @include font(48px, 58px, 900);
         color: $black;
         text-transform: uppercase;
         position: relative;
+    }
+
+    &__img {
+        object-fit: cover;
     }
 
     &__title::after {
@@ -35,5 +38,61 @@
         background-color: $pink-bkg;
         flex-grow: 1;
 
+    }
+}
+
+@media (max-width: 769px) {
+    .brand {
+
+
+        &__title {
+            @include font(44px, 53px, 900);
+        }
+
+        &__subtitle {
+            @include font(24px, 29px, 700);
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .brand {
+        &__title {
+            @include font(38px, 46px, 900);
+        }
+
+        &__subtitle {
+            @include font(20px, 24px, 700);
+        }
+    }
+}
+
+@media (max-width: 455px) {
+    .brand {
+        &__title {
+            @include font(30px, 46px, 900);
+        }
+
+        &__subtitle {
+            @include font(16px, 24px, 700);
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .brand {
+        height: 363px;
+
+        &__title {
+            @include font(38px, 46px, 900);
+        }
+
+        &__subtitle {
+            @include font(20px, 24px, 700);
+        }
+
+        &__img {
+            display: none;
+        }
     }
 }
