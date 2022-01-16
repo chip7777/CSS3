@@ -16,6 +16,10 @@
         text-transform: uppercase;
     }
 
+    &__menu {
+        display: flex;
+    }
+
     &__menu-link {
         text-decoration: none;
         color: $arivals-nav;
@@ -28,5 +32,19 @@
     &__menu-link:hover {
         color: black;
         text-decoration: underline;
+    }
+}
+
+@media (max-width: 376px) {
+    .arrivals {
+        flex-direction: column;
+
+        &__title {
+            margin-top: 28px;
+        }
+
+        &__nav {
+            margin-bottom: 28px;
+        }
     }
 }

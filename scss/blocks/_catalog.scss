@@ -1,5 +1,47 @@
-.products {
+.catalog {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        justify-content: space-between;
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+    }
 
+    &__item {
+        justify-content: space-between;
+        width: 100%;
+        min-height: 420px;
+        background-color: $yellow-bkg;
+    }
+
+    &__item-img {
+        width: 100%;
+
+    }
+
+    &__item-title {
+        @include font(13px, 16px, 400);
+        text-transform: uppercase;
+        color: $black-text;
+        margin-left: 18px;
+        margin-top: 10px;
+    }
+
+    &__item-text {
+        margin-left: 18px;
+        margin-top: 13px;
+        color: $gray-product-text;
+        @include font(14px, 17px, 300);
+    }
+
+    &__item-cost {
+        margin-top: 18px;
+        margin-left: 18px;
+        margin-bottom: 20px;
+        color: $pink-text;
+        @include font(16px, 19px, 400);
+    }
 
     &__title {
         margin-top: 96px;
@@ -13,20 +55,6 @@
         color: $gray-text;
         @include font(14px, 17px, 400);
         margin-bottom: 48px;
-    }
-
-    &__list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-
-    &__item {
-        justify-content: space-between;
-        width: 360px;
-        min-height: 420px;
-        margin-bottom: 30px;
-        background-color: $yellow-bkg;
     }
 
     &__item-wrapper {
@@ -45,7 +73,7 @@
     &__item-overlay {
         display: none;
         width: 100%;
-        min-height: 420px;
+        min-height: 100%;
         background: rgba(58, 56, 56, 0.86);
         position: absolute;
         top: 0;
@@ -68,72 +96,8 @@
         transform: translate(-50%, -50%);
     }
 
-    &__item-button:hover,
-    &__item-button:focus {
-        background: $pink-text;
-    }
-
-    &__item-button:active {
-        background: transparent;
-    }
-
-    &__item-button-icon {
-        margin-right: 10px;
-    }
-
-    &__item-img {
-        margin-bottom: 24px;
-    }
-
-    &__item-title {
-        @include font(13px, 16px, 400);
-        text-transform: uppercase;
-        color: $black-text;
-        margin-left: 18px;
-    }
-
-    &__item-text {
-        margin-left: 18px;
-        margin-top: 13px;
-        color: $gray-product-text;
-        @include font(14px, 17px, 300);
-    }
-
-    &__item-cost {
-        margin-top: 18px;
-        margin-left: 18px;
-        margin-bottom: 20px;
-        color: $pink-text;
-        @include font(16px, 19px, 400);
-    }
-
-    &__button_wrap {
-        margin: 48px;
-        display: flex;
-        justify-content: center;
-    }
-
-    &__button {
-        color: $pink-text;
-        width: 211px;
-        height: 47px;
-        background-color: $white-text;
-        border-color: $pink-text;
-        @include font(14px, 17px, 400);
-    }
-
-    &__button:hover,
-    &__button:focus {
-        background-color: $pink-text;
-        color: $white-text;
-    }
-
-    &__button:active {
-        color: $pink-text;
-        background-color: $white-text;
-    }
-
     &__filter-list {
+        width: 100%;
         min-height: 134px;
         display: flex;
         justify-content: space-between;
@@ -143,7 +107,7 @@
     &__filter-item {
         @include font(14px, 17px, 600);
         text-transform: uppercase;
-        min-width: 360px;
+        min-width: 30%;
         display: flex;
         align-items: center;
         color: $catalog-filter;
@@ -168,6 +132,7 @@
     }
 
     &__filter-subitem {
+        @include font(14px, 17px, 400);
         padding-right: 30px;
     }
 
@@ -205,4 +170,55 @@
 
     }
 
+    &__item-button:hover,
+    &__item-button:focus {
+        background: $pink-text;
+    }
+
+    &__item-button:active {
+        background: transparent;
+    }
+
+    &__item-button-icon {
+        margin-right: 10px;
+    }
+
+    &__counters-link:hover {
+        text-decoration: underline;
+    }
+
+}
+
+@media (max-width: 769px) {
+    .catalog {
+        &__filter-last {
+            display: none;
+        }
+
+        &__list {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-column-gap: 16px;
+            grid-row-gap: 16px;
+        }
+    }
+}
+
+@media (max-width: 376px) {
+    .catalog {
+        &__filter-title {
+            display: none;
+        }
+
+        &__list {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(9, 1fr);
+
+        }
+
+        &__filter-subitem {
+            @include font(12px, 14px, 400);
+        }
+
+    }
 }
